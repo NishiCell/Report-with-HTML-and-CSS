@@ -1,0 +1,55 @@
+
+@page { margin: 0 }
+
+.sheet {
+  margin: 0;
+  padding: 15mm;
+  width: 210mm; height: 296mm;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+body {
+  margin: 0;
+  counter-reset: sheet; /* カウンタの初期化 */
+/*本文フォント*/
+  font-family: "ＭＳ 明朝",serif;
+  font-size: 10.5pt;
+}
+
+.sheet::after {
+  position: absolute;
+  bottom: 10mm;
+  right: 50vw;
+  counter-increment: sheet;
+  content: " " counter(sheet);
+}
+
+p{
+    margin: 10mm ;
+}
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 5mm;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+           body.A3.landscape { width: 420mm }
+  body.A3, body.A4.landscape { width: 297mm }
+  body.A4, body.A5.landscape { width: 210mm }
+  body.A5                    { width: 148mm }
+}
+
+  .sheet h1{
+    font-family: "ＭＳ ゴシック",sans-serif; 
+    font-size: 18pt;
+  }
