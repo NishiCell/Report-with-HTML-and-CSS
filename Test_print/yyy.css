@@ -15,7 +15,7 @@ body {
   margin: 0;
   counter-reset: sheet; /* カウンタの初期化 */
 /*本文フォント*/
-  font-family: "ＭＳ 明朝",serif;
+  font-family:  "游明朝体", "Yu Mincho", YuMincho, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
   font-size: 10.5pt;
 }
 
@@ -52,6 +52,6 @@ p{
 }
 
   .sheet h1{
-    font-family: "ＭＳ ゴシック",sans-serif; 
+    font-family:  "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;; 
     font-size: 18pt;
   }
