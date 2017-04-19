@@ -19,10 +19,31 @@ body {
   font-size: 10.5pt;
 }
 
+  .sheet h1{
+    font-family:  "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;; 
+    font-size: 18pt;
+  }
+
 p{
   margin: 5mm 0 5mm 10mm;
   letter-spacing: 0.5px;
   line-height: 1.5;
+}
+
+.center{
+  text-align: center;
+}
+
+#top_title{
+  margin: 0;
+  font-size: 20pt;
+  position: relative;
+  top: -40px;
+}
+
+.right{
+  margin:0;
+  text-align: right;
 }
 
 .sheet::after {
@@ -51,7 +72,5 @@ p{
   body.A5                    { width: 148mm }
 }
 
-  .sheet h1{
-    font-family:  "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;; 
-    font-size: 18pt;
-  }
+
+
