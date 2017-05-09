@@ -1,0 +1,103 @@
+
+@page { margin: 0 }
+
+.sheet {
+  margin: 0;
+  padding: 30mm;
+  width: 210mm; height: 296mm;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+body {
+  margin: 0;
+  counter-reset: sheet; /* カウンタの初期化 */
+/*本文フォント*/
+  font-family:  "游明朝体", "Yu Mincho", YuMincho, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+  font-size: 10.5pt;
+}
+
+  .sheet h1{
+    font-family:  "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;; 
+    font-size: 18pt;
+  }
+
+.sheet h2{
+  position: relative;
+  left: 1.5em;
+}
+
+.sheet h3{
+  position: relative;
+  left: 2em;
+}
+
+table{
+margin: auto;
+border-collapse: collapse;
+}
+
+th, .table_bottom{
+  border-bottom:2px  solid  #000000;
+}
+td{
+  padding: 8px 20px;
+}
+
+p{
+  margin: 5mm 0 5mm 10mm;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+li{
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.center{
+  text-align: center;
+}
+
+#top_title{
+  margin: 0;
+  font-size: 20pt;
+  position: relative;
+  top: -40px;
+}
+
+.right{
+  margin:0;
+  text-align: right;
+}
+
+.sheet::after {
+  position: absolute;
+  bottom: 10mm;
+  right: 50vw;
+  counter-increment: sheet;
+  content: " " counter(sheet);
+}
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 5mm;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+           body.A3.landscape { width: 420mm }
+  body.A3, body.A4.landscape { width: 297mm }
+  body.A4, body.A5.landscape { width: 210mm }
+  body.A5                    { width: 148mm }
+}
+
+
+
