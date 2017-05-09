@@ -24,16 +24,6 @@ body {
     font-size: 18pt;
   }
 
-.sheet h2{
-  position: relative;
-  left: 1.5em;
-}
-
-.sheet h3{
-  position: relative;
-  left: 2em;
-}
-
 p{
   margin: 5mm 0 5mm 10mm;
   letter-spacing: 0.5px;

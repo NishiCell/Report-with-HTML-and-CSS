@@ -34,10 +34,27 @@ body {
   left: 2em;
 }
 
+table{
+margin: auto;
+border-collapse: collapse;
+}
+
+th, .table_bottom{
+  border-bottom:2px  solid  #000000;
+}
+td{
+  padding: 8px 20px;
+}
+
 p{
   margin: 5mm 0 5mm 10mm;
   letter-spacing: 0.5px;
   line-height: 1.5;
+}
+
+li{
+  margin: 10px 0;
+  font-size: 1.2em;
 }
 
 .center{
